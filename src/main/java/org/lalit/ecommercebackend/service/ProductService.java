@@ -7,7 +7,7 @@ import org.lalit.ecommercebackend.model.Product;
 import org.lalit.ecommercebackend.repository.CategoryRepository;
 import org.lalit.ecommercebackend.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.parameters.P;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;

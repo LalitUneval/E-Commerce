@@ -14,7 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
-import javax.swing.plaf.synth.SynthTextAreaUI;
+
 import java.util.*;
 import java.util.stream.Collectors;
 

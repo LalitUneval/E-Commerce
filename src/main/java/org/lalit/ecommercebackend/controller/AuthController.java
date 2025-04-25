@@ -42,41 +42,7 @@ public class AuthController {
         this.userRepository = userRepository;
     }
 
-//    @PostMapping("/login")
-//    public ResponseEntity<?> authenticateUser(@Valid @RequestBody AuthRequest loginRequest) {
-//        Authentication authentication = authenticationManager.authenticate(
-//                new UsernamePasswordAuthenticationToken(
-//                        loginRequest.getUsername(),
-//                        loginRequest.getPassword()
-//                )
-//        );
-//
-//        System.out.println("Princinple : "+authentication.getPrincipal()+" Name of the user : "+authentication.getName());
-//        SecurityContextHolder.getContext().setAuthentication(authentication);
-//        System.out.println("hello");
-//        String jwt = tokenProvider.createToken(authentication);
-//
-//        User user = userRepository.findByUsername(loginRequest.getUsername())
-//                .orElseThrow(() -> new RuntimeException("User not found"));
-//
-////        AuthResponse response = new AuthResponse(
-////                jwt,
-////                user.getId(),
-////                user.getUsername(),
-////                user.getEmail(),
-////                user.getRoles()
-////        );
-//        AuthResponse response = AuthResponse.builder()
-//                .token(jwt)
-//                .type("Bearer")
-//                .id(user.getId())
-//                .username(user.getUsername())
-//                .email(user.getEmail())
-//                .roles(user.getRoles())
-//                .build();
-//
-//        return ResponseEntity.ok(response);
-//    }
+
 @PostMapping("/login")
 public ResponseEntity<?> authenticateUser(@Valid @RequestBody AuthRequest loginRequest) {
     try {

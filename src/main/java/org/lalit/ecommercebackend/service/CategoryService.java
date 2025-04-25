@@ -1,6 +1,6 @@
 package org.lalit.ecommercebackend.service;
 
-import jakarta.validation.Valid;
+
 import org.lalit.ecommercebackend.dto.CategoryDTO;
 import org.lalit.ecommercebackend.exception.ResourceNotFoundException;
 import org.lalit.ecommercebackend.model.Category;

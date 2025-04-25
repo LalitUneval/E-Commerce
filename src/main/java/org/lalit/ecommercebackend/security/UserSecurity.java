@@ -2,7 +2,7 @@ package org.lalit.ecommercebackend.security;
 
 
 
-import org.lalit.ecommercebackend.model.User;
+
 import org.lalit.ecommercebackend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
