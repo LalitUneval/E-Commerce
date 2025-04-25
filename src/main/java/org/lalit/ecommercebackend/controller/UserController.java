@@ -4,7 +4,7 @@ package org.lalit.ecommercebackend.controller;
 
 import jakarta.validation.Valid;
 import org.lalit.ecommercebackend.dto.UserDTO;
-import org.lalit.ecommercebackend.service.OrderService;
+
 import org.lalit.ecommercebackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

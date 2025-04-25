@@ -31,8 +31,11 @@ public class JwtTokenProvider2 {
     public String createToken(Authentication authentication){
 
 
+        //getPrincipal has the detail of user like name,password etc.,
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 
+        //Converts a Collection<? extends GrantedAuthority> into a comma-separated String.
+        //Example: if roles are [ROLE_USER, ROLE_ADMIN], the result will be "ROLE_USER,ROLE_ADMIN".
         String authorities = userDetails
                 .getAuthorities()
                 .stream()
@@ -62,6 +65,9 @@ public class JwtTokenProvider2 {
                 .build()
                 .parseSignedClaims(token)
                 .getPayload();
+        //Takes the comma-separated roles string from the JWT claim (e.g., "ROLE_USER,ROLE_ADMIN").
+        //Splits it into an array of roles.
+        //Maps each role string back into a SimpleGrantedAuthority.
         Collection<? extends GrantedAuthority> authorities =
                 Arrays.stream(claims.get("auth").toString().split(",")).map(
                         SimpleGrantedAuthority::new

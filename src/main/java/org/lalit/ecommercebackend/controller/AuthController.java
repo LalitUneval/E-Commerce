@@ -74,7 +74,7 @@ public ResponseEntity<?> authenticateUser(@Valid @RequestBody AuthRequest loginR
         return ResponseEntity.ok(response);
 
     } catch (Exception e) {
-        e.printStackTrace(); // log the error
+        e.printStackTrace();
         return ResponseEntity.badRequest().body("Login failed: " + e.getMessage());
     }
 }
